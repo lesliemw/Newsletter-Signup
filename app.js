@@ -10,7 +10,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req,res){
-    res.sendFile(__dirname + "/signup.html")
+    res.sendFile(__dirname + "/index.html")
 })
 
 app.post("/", function(req,res){
@@ -65,12 +65,4 @@ app.listen(process.env.PORT || 5000, function(){
 
 
 
-<<<<<<< HEAD
-=======
-// API Key
-// 37176609a61a1eb51d1436f4358cdcf4-us21
-// client Key 
-// // 3cf83304f4771423d3c5775154ab5917-us21
-// audience id 
-// a93ca32d88
->>>>>>> 124c00dac24c502d4bc4cc4c4a41fe96eeebd75c
+
