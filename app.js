@@ -3,6 +3,8 @@ const bodyParser= require("body-parser");
 const request= require("request");
 const https= require("https");
 const app= express();
+require('dotenv').config()
+let API_KEY = process.env.API_KEY;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -33,7 +35,7 @@ app.post("/", function(req,res){
     const url="https://us21.api.mailchimp.com/3.0/lists/a93ca32d88";
     const options= {
         method: "POST",
-        auth: "lesliemw:37176609a61a1eb51d1436f4358cdcf4-us21"
+        auth: "lesliemw:API_KEY"
     }
 
     const request= https.request(url, options, function(response){
@@ -62,9 +64,3 @@ app.listen(5000, function(){
 
 
 
-// API Key
-// 37176609a61a1eb51d1436f4358cdcf4-us21
-// client Key 
-// // 3cf83304f4771423d3c5775154ab5917-us21
-// audience id 
-// a93ca32d88
