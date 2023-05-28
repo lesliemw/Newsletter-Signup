@@ -58,9 +58,19 @@ app.post("/failure", function (req, res){
     res.redirect("/")
 })
 
-app.listen(5000, function(){
+//to set the app to run on the website's port OR on port 5000 
+app.listen(process.env.PORT || 5000, function(){
     console.log("Server is live on port 5000");
 });
 
 
 
+<<<<<<< HEAD
+=======
+// API Key
+// 37176609a61a1eb51d1436f4358cdcf4-us21
+// client Key 
+// // 3cf83304f4771423d3c5775154ab5917-us21
+// audience id 
+// a93ca32d88
+>>>>>>> 124c00dac24c502d4bc4cc4c4a41fe96eeebd75c
